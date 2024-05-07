@@ -9,9 +9,9 @@ body {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     background-color: #333;
     padding: 20px;
     color: #fff;
@@ -43,7 +43,7 @@ header {
     left: 0;
     background-color: #333;
     padding: 10px;
-    z-index: 1; /* Añadido */
+    z-index: 1;
 }
 
 .dropdown li {
@@ -57,17 +57,24 @@ header {
 
 /* Estilos de la sección 1 */
 .section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
     background-color: #f5f5dc;
     padding: 50px;
 }
 
 .content {
+    display: grid;
     max-width: 400px;
     margin: auto;
+    grid-column: 1 / span 2;
+    grid-row-gap: 20px;
 }
 
-.small-text {
-    font-size: 14px;
+
+.fruit-image {
+    grid-column: 2;
+    text-align: right; 
 }
 
 .big-green-text {
@@ -77,9 +84,14 @@ header {
 }
 
 .search-form {
-    display: flex;
-    margin-bottom: 20px;
+    grid-column: 1;
 }
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
 
 .search-form input {
     flex: 1;
@@ -93,11 +105,6 @@ header {
     border: none;
     cursor: pointer;
     margin-left: 10px;
-}
-
-.fruit-image {
-    position: relative;
-    text-align: right;
 }
 
 .arrow-left,
@@ -144,7 +151,6 @@ header {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #333;
         padding: 10px;
     }
     
@@ -164,6 +170,3 @@ header {
 .navigation ul li:hover .dropdown {
     display: block;
 }
-
-
-
