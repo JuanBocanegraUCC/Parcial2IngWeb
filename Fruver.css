@@ -190,6 +190,24 @@ header {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .section1 {
+        padding: 20px;
+    }
+
+    .section2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .navigation ul li:hover .dropdown {
     display: block;
 }
