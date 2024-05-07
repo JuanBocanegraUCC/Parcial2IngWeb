@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    z-index: 1; /* Añadido */
+}
+
+.dropdown li {
+    display: block;
+    margin: 5px 0;
+}
+
+.header-right {
+    display: flex;
+}
+
+/* Estilos de la sección 1 */
+.section1 {
+    background-color: #f5f5dc;
+    padding: 50px;
+}
+
+.content {
+    max-width: 400px;
+    margin: auto;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+.big-green-text {
+    color: green;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.fruit-image {
+    position: relative;
+    text-align: right;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.arrow-left {
+    left: -20px;
+}
+
+.arrow-right {
+    right: -20px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .header-left {
+        margin-bottom: 20px;
+    }
+    
+    .navigation {
+        display: none;
+    }
+    
+    .dropdown {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+    }
+    
+    .dropdown li {
+        margin: 5px 0;
+    }
+    
+    .header-right {
+        justify-content: center;
+    }
+    
+    .section1 {
+        padding: 20px;
+    }
+}
+
+.navigation ul li:hover .dropdown {
+    display: block;
+}
+
+
+
